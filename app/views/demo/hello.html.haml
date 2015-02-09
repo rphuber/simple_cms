@@ -1,0 +1,28 @@
+%h1 Demo#hello
+%p Hello World
+= 1 + 1
+%br/
+- target = "world"
+= "Hello #{target}"
+%br/
+- @array.each do |n|
+  = n
+  %br/
+%a{:href => "/demo/index"}index page 1
+%br/
+= link_to('index page 2', {:action => 'index'})
+%br/
+%p 
+  ID: 
+  = params[:id]
+%p 
+  ID: 
+  = @id
+%p 
+  Page: 
+  = @page
+%p
+  Next Page:
+  = @page + 1
+%hr/
+= params.inspect

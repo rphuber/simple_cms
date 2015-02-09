@@ -1,0 +1,8 @@
+%h1 Demo#index
+%p Hello from index
+
+%a{:href => "/demo/hello"}hello page 1
+%br/
+=link_to('hello page 2', {:action => 'hello'})
+%br/
+=link_to('hello with params', {:action => 'hello', :page => 5, :id => 20})
