@@ -43,7 +43,6 @@ ActiveRecord::Schema.define(version: 20150209054300) do
     t.integer  "position",     limit: 4
     t.boolean  "visible",      limit: 1,     default: false
     t.string   "content_type", limit: 255
-    t.string   "index",        limit: 255
     t.text     "content",      limit: 65535
     t.integer  "page_id",      limit: 4
     t.datetime "created_at",                                 null: false

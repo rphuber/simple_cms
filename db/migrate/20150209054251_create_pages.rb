@@ -11,6 +11,7 @@ class CreatePages < ActiveRecord::Migration
     add_index("pages", "subject_id")
     add_index("pages", "permalink")
   end
+  
   def down
     drop_table :pages
   end

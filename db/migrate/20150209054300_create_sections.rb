@@ -4,13 +4,14 @@ class CreateSections < ActiveRecord::Migration
       t.string "name"
       t.integer "position"
       t.boolean "visible", :default => false
-      t.string "content_type", :index
+      t.string "content_type"
       t.text "content"
       t.integer "page_id"
       t.timestamps null: false
     end
     add_index("sections", "page_id")
   end
+  
   def down
     drop_table :sections
   end
