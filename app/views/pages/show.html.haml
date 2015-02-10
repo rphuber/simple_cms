@@ -1,0 +1,38 @@
+-if !flash[:notice].blank?
+  .notice
+    = flash[:notice]
+
+= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link')
+
+.pages.show
+  %h2 Show Subject
+
+  %table{:summary => 'Page detail view'}
+    %tr 
+      %th Name
+      %td 
+        = @page.name
+    %tr
+      %th Position
+      %td
+        = @page.position
+    %tr
+      %th Visible
+      %td
+        = @page.visible ? 'true' : 'false'
+    %tr
+      %th Permalink
+      %td
+        = @page.permalink
+    %tr
+      %th Subject Id
+      %td
+        = @page.subject_id
+    %tr
+      %th Created
+      %td
+        = @page.created_at 
+    %tr
+      %th Updated
+      %td
+        = @page.updated_at

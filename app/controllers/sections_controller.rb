@@ -1,4 +1,4 @@
-class SectionController < ApplicationController
+class SectionsController < ApplicationController
   
   layout false
 

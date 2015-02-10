@@ -1,0 +1,29 @@
+= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link')
+
+.pages.new
+  %h2 Update Page
+
+  = form_for(:page, :url => {:action => 'create'}) do |f|
+    %table{:summary => 'Page form fields'}
+      %tr
+        %th Name
+        %td 
+          = f.text_field(:name)
+      %tr
+        %th Position
+        %td 
+          = f.text_field(:position)
+      %tr
+        %th Permalink
+        %td 
+          = f.text_field(:permalink)
+      %tr
+        %th Subject Id
+        %td
+          = f.text_field(:subject_id)
+      %tr
+        %th Visible
+        %td 
+          = f.text_field(:visible)
+    .form-buttons
+      =submit_tag("Update Page")

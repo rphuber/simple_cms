@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20150209233008) do
 
   create_table "pages", force: :cascade do |t|
     t.string   "name",       limit: 255
-    t.integer  "permalink",  limit: 4
+    t.string   "permalink",  limit: 255
     t.integer  "position",   limit: 4
     t.boolean  "visible",    limit: 1,   default: false
     t.integer  "subject_id", limit: 4

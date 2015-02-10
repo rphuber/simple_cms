@@ -1,0 +1,14 @@
+= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link')
+
+.sections.delete
+  %h2 Delete Page
+
+  = form_for(:page, :url => {:action => 'destroy', :id => @page.id}) do |f|
+    %p Are you sure that you want to permantly delete this page?
+    %p.reference-name 
+      = @page.name
+
+    .form-button
+      = submit_tag("Delete Page")
+    
+  
