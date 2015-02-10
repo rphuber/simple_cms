@@ -1,7 +1,3 @@
--if !flash[:notice].blank?
-  .notice
-    = flash[:notice]
-
 .sections.index
   %h2 Sections
 
@@ -13,8 +9,6 @@
       %th Section
       %th Visible
       %th Content Type
-      %th Content
-      %th Page Id
       %th Actions
 
     - @sections.each do |section|
@@ -27,10 +21,6 @@
           =section.visible ? 'Yes' : 'No'
         %td.center
           =section.content_type
-        %td.center 
-          =section.content
-        %td.center
-          =section.page_id
         %td.actions
           = link_to("Show", {:action => 'show', :id => section.id}, :class => 'action show')
           = link_to("Edit", {:action => 'edit', :id => section.id}, :class => 'action edit')

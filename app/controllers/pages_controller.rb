@@ -1,9 +1,9 @@
 class PagesController < ApplicationController
 
-  layout false
+  layout "admin"
 
   def index
-    @pages = Page.all
+    @pages = Page.sorted
   end
 
   def show
