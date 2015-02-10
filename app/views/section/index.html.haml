@@ -1,0 +1,37 @@
+-if !flash[:notice].blank?
+  .notice
+    = flash[:notice]
+
+.sections.index
+  %h2 Sections
+
+  = link_to("Add New Section", {:action => 'new'}, :class => 'action new')
+
+  %table.listing{ :summary => "Section list" }
+    %tr.header
+      %th &nbsp;
+      %th Section
+      %th Visible
+      %th Content Type
+      %th Content
+      %th Page Id
+      %th Actions
+
+    - @sections.each do |section|
+      %tr
+        %td 
+          =section.position
+        %td 
+          =section.name
+        %td.center
+          =section.visible ? 'Yes' : 'No'
+        %td.center
+          =section.content_type
+        %td.center 
+          =section.content
+        %td.center
+          =section.page_id
+        %td.actions
+          = link_to("Show", {:action => 'show', :id => section.id}, :class => 'action show')
+          = link_to("Edit", {:action => 'edit', :id => section.id}, :class => 'action edit')
+          = link_to("Delete", {:action => 'delete', :id => section.id}, :class => 'action delete')

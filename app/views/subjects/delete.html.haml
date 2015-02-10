@@ -1,0 +1,14 @@
+= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link')
+
+.subjects.delete
+  %h2 Delete Subject
+
+  = form_for(:subject, :url => {:action => 'destroy', :id => @subject.id}) do |f|
+    %p Are you sure that you want to permantly delete this subject?
+    %p.reference-name 
+      = @subject.name
+
+    .form-button
+      = submit_tag("Delete Subject")
+    
+  

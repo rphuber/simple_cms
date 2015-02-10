@@ -1,0 +1,42 @@
+-if !flash[:notice].blank?
+  .notice
+    = flash[:notice]
+
+= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link')
+
+.sections.show
+  %h2 Show Section
+
+  %table{:summary => 'Section detail view'}
+    %tr 
+      %th Name
+      %td 
+        = @section.name
+    %tr
+      %th Position
+      %td
+        = @section.position
+    %tr
+      %th Visible
+      %td
+        = @section.visible ? 'true' : 'false'
+    %tr
+      %th Content Type
+      %td
+        = @section.content_type
+    %tr
+      %th Content
+      %td
+        = @section.content
+    %tr
+      %th Page Id
+      %td
+        = @section.page_id
+    %tr
+      %th Created
+      %td
+        = @section.created_at 
+    %tr
+      %th Updated
+      %td
+        = @section.updated_at

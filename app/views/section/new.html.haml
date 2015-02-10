@@ -1,0 +1,35 @@
+= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link')
+
+.sections.new
+  %h2 Create Section
+
+  = form_for(:section, :url => {:action => 'create'}) do |f|
+    %table{:summary => 'Section form fields'}
+      %tr
+        %th Name
+        %td 
+          = f.text_field(:name)
+      %tr
+        %th Position
+        %td 
+          = f.text_field(:position)
+      %tr
+        %th Content Type
+        %td 
+          = f.text_field(:content_type)
+      %tr
+        %th Content
+        %td 
+          = f.text_field(:content)
+      %tr
+        %th Visible
+        %td 
+          = f.text_field(:visible)
+      %tr
+        %th Page Id
+        %td
+          = f.text_field(:page_id)
+    .form-buttons
+      =submit_tag("Create Section")
+    
+  
