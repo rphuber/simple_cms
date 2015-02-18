@@ -18,7 +18,7 @@
         %td 
           =subject.name
         %td.center 
-          =subject.visible ? 'Yes' : 'No'
+          =status_tag(subject.visible)
         %td.center 
           =subject.pages.size
         %td.actions
